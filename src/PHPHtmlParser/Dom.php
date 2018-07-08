@@ -31,6 +31,13 @@ class Dom
     public $root;
 
     /**
+     * The status code if loaded via url.
+     *
+     * @var int
+     */
+    public $statusCode;
+
+    /**
      * The raw version of the document string.
      *
      * @var string
@@ -160,6 +167,8 @@ class Dom
             $curl = new Curl;
         }
         $content = $curl->get($url);
+        
+        $this->statusCode = $curl->statusCode;
 
         return $this->loadStr($content, $options);
     }

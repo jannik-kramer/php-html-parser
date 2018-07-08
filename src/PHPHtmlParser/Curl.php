@@ -12,6 +12,13 @@ class Curl implements CurlInterface
 {
 
     /**
+     * The status code of the response.
+     *
+     * @var int
+     */
+    public $statusCode;
+
+    /**
      * A simple curl implementation to get the content of the url.
      *
      * @param string $url
@@ -35,6 +42,8 @@ class Curl implements CurlInterface
             $error = curl_error($ch);
             throw new CurlException('Error retrieving "'.$url.'" ('.$error.')');
         }
+
+        $this->statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         return $content;
     }
