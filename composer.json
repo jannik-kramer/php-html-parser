@@ -1,9 +1,9 @@
 {
-    "name": "thesoftwarefanatics/php-html-parser",
+    "name": "jannik-kramer/php-html-parser",
     "type": "library",
     "description": "An HTML DOM parser. It allows you to manipulate HTML. Find tags on an HTML page with selectors just like jQuery.",
     "keywords": ["html", "dom", "parser"],
-    "homepage": "https://github.com/thesoftwarefanatics/php-html-parser",
+    "homepage": "https://github.com/jannik-kramer/php-html-parser",
     "license": "MIT",
     "authors": [
         {
@@ -15,6 +15,10 @@
             "name": "The Software Fanatics GmbH",
             "email": "dev@thesoftwarefanatics.com",
             "homepage": "https://thesoftwarefanatics.com"
+        },
+        {
+            "name": "Jannik Kramer",
+            "email": "mail@jannikkramer.de"
         }
     ],
     "require": {
